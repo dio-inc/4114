@@ -231,11 +231,11 @@ body{
 .header-flex {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap:32px;
 }
 
 .logo-img {
-  height: 50px;
+  height: 85px;
   width: auto;
   object-fit: contain;
 }
