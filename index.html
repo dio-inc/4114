@@ -1,23 +1,3 @@
-<header class="site-header">
-  <div class="container header-flex">
-    
-    <!-- ★ 追加：ロゴ -->
-    <img src="IMG_2819.jpeg" alt="株式会社DIO ロゴ" class="logo-img">
-
-    <!-- 会社名 -->
-    <div class="brand">
-      <h1>株式会社DIO</h1>
-      <p class="sub">Flooring & Interior Works</p>
-    </div>
-
-    <button class="nav-toggle">☰</button>
-    <nav class="nav">
-      <a href="#services">サービス</a>
-      <a href="#works">施工実績</a>
-      <a href="#contact" class="btn primary">お問い合わせ</a>
-    </nav>
-  </div>
-</header>
 <!doctype html>
 <html lang="ja">
 <head>
@@ -28,12 +8,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- ===================== ヘッダー ===================== -->
   <header class="site-header">
     <div class="container">
+      <!-- 左側ロゴ -->
+      <div class="logo-box">
+        <img src="IMG_2819.jpeg" alt="株式会社DIOロゴ">
+      </div>
+
+      <!-- 会社名 -->
       <div class="brand">
         <h1>株式会社DIO</h1>
         <p class="sub">リフォーム・床仕上げのプロフェッショナル</p>
       </div>
+
+      <!-- ナビゲーション -->
       <nav class="nav">
         <a href="#services">事業内容</a>
         <a href="#works">施工実績</a>
@@ -43,10 +32,13 @@
         <a href="#company">会社概要</a>
         <a href="#contact" class="btn primary">お問い合わせ</a>
       </nav>
+
+      <!-- ハンバーガー -->
       <button class="nav-toggle" aria-label="メニュー">☰</button>
     </div>
   </header>
 
+  <!-- ===================== メイン ===================== -->
   <main>
     <!-- ヒーロー -->
     <section class="hero">
@@ -79,7 +71,7 @@
     <!-- 事業内容 -->
     <section id="services" class="services container">
       <h3>事業内容</h3>
-      <div class="grid-services">
+      <div class="grid grid-6">
         <div class="svc">
           <img src="assets/icon-tile.svg" alt="">
           <h4>フロアタイル施工</h4>
@@ -88,7 +80,7 @@
         <div class="svc">
           <img src="assets/icon-carpet.svg" alt="">
           <h4>タイルカーペット施工</h4>
-          <p>オフィスや店舗向けの施工に対応。</p>
+          <p>オフィス向けの施工に対応。</p>
         </div>
         <div class="svc">
           <img src="assets/icon-nonslip.svg" alt="">
@@ -113,9 +105,9 @@
       </div>
     </section>
 
-    <!-- 施工実績 -->
+    <!-- 施工実績例 -->
     <section id="works" class="works container">
-      <h3>施工実績</h3>
+      <h3>施工実績例</h3>
       <div class="gallery">
         <figure>
           <img src="IMG_1298.jpeg" alt="大阪市内 商業施設：フロアタイル張替え">
@@ -135,59 +127,97 @@
         </figure>
       </div>
     </section>
-<!-- ===================== ビフォーアフター ===================== -->
-<section id="beforeafter" class="container">
-  <h2>BEFORE / AFTER</h2>
 
-  <div class="ba-list">
+    <!-- 短期施工アピール -->
+    <section id="fast-service" class="container">
+      <div class="fast-inner">
+        <h3>短期施工で営業に負担をかけません</h3>
+        <p class="fast-lead">急ぎの工事もお任せください。現場に合わせたスケジュールで、可能な限り短時間で仕上げます。</p>
 
-    <!-- 1件目 -->
-    <div class="ba-item">
-      <div class="ba-images">
-        <div class="ba-box">
-          <p class="ba-label">BEFORE</p>
-          <img src="img/before1.jpg" alt="">
-        </div>
-        <div class="ba-box">
-          <p class="ba-label">AFTER</p>
-          <img src="img/after1.jpg" alt="">
+        <div class="fast-grid" role="list">
+          <article class="fast-card" role="listitem" aria-label="最短即日作業">
+            <div class="fast-icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 2L3 14H11L11 22L21 10H13L13 2Z" fill="#7A5A3D"/>
+              </svg>
+            </div>
+            <h4>最短即日作業</h4>
+            <p>小規模な張替えなら当日施工も可能。急ぎのご依頼に対応します。</p>
+          </article>
+
+          <article class="fast-card" role="listitem" aria-label="夜間施工対応">
+            <div class="fast-icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="#D7B894"/>
+              </svg>
+            </div>
+            <h4>夜間施工対応</h4>
+            <p>営業時間に影響が出ないよう夜間施工も承ります。（要事前相談）</p>
+          </article>
+
+          <article class="fast-card" role="listitem" aria-label="営業時間後でもOK">
+            <div class="fast-icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11.414V7h-2v6.586l4 4 1.414-1.414-3.414-3.172z" fill="#4B3A2A"/>
+              </svg>
+            </div>
+            <h4>営業時間後でもOK</h4>
+            <p>店舗・オフィスは営業時間後に施工。営業再開を最優先に作業します。</p>
+          </article>
         </div>
       </div>
-      <p class="ba-text">キッチン クッションフロア貼り替え工事</p>
-    </div>
+    </section>
 
-    <!-- 2件目 -->
-    <div class="ba-item">
-      <div class="ba-images">
-        <div class="ba-box">
-          <p class="ba-label">BEFORE</p>
-          <img src="img/before2.jpg" alt="">
+    <!-- BEFORE / AFTER -->
+    <section id="beforeafter" class="container">
+      <h2>短期工事例（数時間〜1日程度）</h2>
+      <h2>BEFORE / AFTER</h2>
+
+      <div class="ba-list">
+        <div class="ba-item">
+          <div class="ba-images">
+            <div class="ba-box">
+              <p class="ba-label">BEFORE</p>
+              <img src="IMG_0341.jpeg" alt="">
+            </div>
+            <div class="ba-box">
+              <p class="ba-label">AFTER</p>
+              <img src="IMG_0343.jpeg" alt="">
+            </div>
+          </div>
+          <p class="ba-text">オフィス　タイルカーペット貼り替え工事</p>
         </div>
-        <div class="ba-box">
-          <p class="ba-label">AFTER</p>
-          <img src="img/after2.jpg" alt="">
+
+        <div class="ba-item">
+          <div class="ba-images">
+            <div class="ba-box">
+              <p class="ba-label">BEFORE</p>
+              <img src="IMG_2814.jpeg" alt="">
+            </div>
+            <div class="ba-box">
+              <p class="ba-label">AFTER</p>
+              <img src="IMG_2813.jpeg" alt="">
+            </div>
+          </div>
+          <p class="ba-text">キッチン フロアタイル貼り替え</p>
+        </div>
+
+        <div class="ba-item">
+          <div class="ba-images">
+            <div class="ba-box">
+              <p class="ba-label">BEFORE</p>
+              <img src="IMG_2815.jpeg" alt="">
+            </div>
+            <div class="ba-box">
+              <p class="ba-label">AFTER</p>
+              <img src="IMG_2816.jpeg" alt="">
+            </div>
+          </div>
+          <p class="ba-text">個人宅　洋室一部貼り替え工事</p>
         </div>
       </div>
-      <p class="ba-text">トイレCF張替え工事</p>
-    </div>
+    </section>
 
-    <!-- 3件目 -->
-    <div class="ba-item">
-      <div class="ba-images">
-        <div class="ba-box">
-          <p class="ba-label">BEFORE</p>
-          <img src="img/before3.jpg" alt="">
-        </div>
-        <div class="ba-box">
-          <p class="ba-label">AFTER</p>
-          <img src="img/after3.jpg" alt="">
-        </div>
-      </div>
-      <p class="ba-text">洋室貼替え工事</p>
-    </div>
-
-  </div>
-</section>
     <!-- お客様の声 -->
     <section id="reviews" class="reviews container">
       <h3>お客様の声</h3>
@@ -210,17 +240,17 @@
         <div class="svc">
           <img src="IMG_2802.webp" alt="フロアタイル">
           <h4>フロアタイル</h4>
-          <p>耐久性が高くデザインも豊富。店舗やオフィスに最適。</p>
+          <p>耐久性が高くデザインも豊富。店舗や個人宅に最適。</p>
         </div>
         <div class="svc">
           <img src="IMG_2798.webp" alt="タイルカーペット">
           <h4>タイルカーペット</h4>
-          <p>汚れが目立ちにくくメンテナンスも簡単。快適な足触り。</p>
+          <p>汚れが目立ちにくくメンテナンスも簡単。快適な足触りでオフィスに最適。</p>
         </div>
         <div class="svc">
           <img src="IMG_2804.jpeg" alt="クッションフロア">
           <h4>クッションフロア</h4>
-          <p>防水・衝撃吸収に優れた床材。水回りにも安心。</p>
+          <p>防水・衝撃吸収に優れた床材。水回りや、ペットルーム、子供部屋に最適。</p>
         </div>
       </div>
     </section>
@@ -245,17 +275,16 @@
     </section>
 
     <!-- 会社概要 -->
-    <section id="company" class="company container">
+    <section id="company" class="section container">
       <h3>会社概要</h3>
-      <table class="profile">
-        <tr><th>会社名</th><td>株式会社DIO</td></tr>
-        <tr><th>所在地</th><td>大阪府大阪市</td></tr>
-        <tr><th>代表</th><td>清水 彬夢</td></tr>
-        <tr><th>事業内容</th><td>床仕上げ工事全般（フロアタイル・タイルカーペット・クッションフロア等）</td></tr>
-        <tr><th>対応エリア</th><td>大阪府中心に近畿一円（応相談）</td></tr>
-        <tr><th>電話番号</th><td><a href="tel:08072554114">080-7255-4114</a></td></tr>
-        <tr><th>メール</th><td><a href="mailto:dio.inc.com@gmail.com">dio.inc.com@gmail.com</a></td></tr>
-      </table>
+      <div class="company-card">
+        <div class="row"><div class="label">会社名</div><div class="value">株式会社DIO</div></div>
+        <div class="row"><div class="label">所在地</div><div class="value">大阪府大阪市</div></div>
+        <div class="row"><div class="label">事業内容</div><div class="value">床仕上げ工事全般（フロアタイル・タイルカーペット・クッションフロア等）</div></div>
+        <div class="row"><div class="label">代表</div><div class="value">清水 彬夢</div></div>
+        <div class="row"><div class="label">電話番号</div><div class="value">080-7255-4114</div></div>
+        <div class="row"><div class="label">メール</div><div class="value">dio.inc.com@gmail.com</div></div>
+      </div>
     </section>
 
     <!-- お問い合わせ -->
@@ -267,23 +296,24 @@
         <label>電話番号（必須）<br><input type="tel" name="phone" required></label>
         <label>現場住所<br><input type="text" name="address"></label>
         <label>ご相談内容<br><textarea name="message" rows="5"></textarea></label>
-        <p class="form-note">※フォームはメール送信方式です。別途、希望があればフォーム送信サービス（Formspree等）に対応します。</p>
+        <p class="form-note">※フォームはメール送信方式です。</p>
         <p><button type="submit" class="btn primary">送信する</button></p>
       </form>
     </section>
   </main>
 
+  <!-- ===================== フッター ===================== -->
   <footer class="site-footer">
     <div class="container">
       <p>© 株式会社DIO</p>
     </div>
   </footer>
 
-<script>
-document.querySelector('.nav-toggle').addEventListener('click', function(){
-  document.querySelector('.nav').classList.toggle('open');
-});
-</script>
-
+  <!-- ハンバーガー開閉スクリプト -->
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function(){
+      document.querySelector('.nav').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
