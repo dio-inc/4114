@@ -227,3 +227,15 @@ body{
     max-width:200px;
   }
 }
+/* ===== ロゴ配置 ===== */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
