@@ -1,91 +1,155 @@
-/* ===================== スマホ用ヘッダー・ロゴ調整 ===================== */
+/* ===================== カラー・全体設定 ===================== */
+:root{
+  --accent:#7A5A3D;
+  --main:#D7B894;
+  --sub:#F5EDE4;
+  --text:#4B3A2A;
+  --bg:#FFFBF6;
+  --maxw:1100px;
+}
 
-/* ヘッダーの全体横並び調整 */
+* { box-sizing:border-box; }
+body {
+  font-family: system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.container { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
+
+/* ===================== ヘッダー ===================== */
+.site-header {
+  background:#fff;
+  border-bottom:1px solid #e6e6e6;
+  position: sticky;
+  top:0;
+  z-index:50;
+}
+
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 左にロゴ+会社名、右にハンバーガー */
+  justify-content: space-between;
   gap: 8px;
   padding: 8px 12px;
 }
 
-/* ロゴのサイズと配置 */
+/* ロゴ */
 .logo-box {
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* 縮まらない */
+  flex-shrink: 0;
 }
-
 .logo-box img {
-  height: 40px;  /* 標準スマホ用サイズ */
+  height: 40px;
   width: auto;
-  display: block;
-  margin-right: 8px; /* 会社名との間隔 */
+  margin-right: 8px;
 }
 
-/* 会社名とサブタイトル */
+/* 会社名 */
 .brand {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height:1.1;
 }
+.brand h1 { font-size: 22px; margin:0; font-weight:bold; color:var(--main);}
+.brand .sub { font-size:12px; margin:0; color:var(--text);}
 
-.brand h1 {
-  font-size: 22px; /* スマホ用文字サイズ */
-  margin: 0;
-  font-weight: bold;
-  color: var(--main);
-}
-
-.brand .sub {
-  font-size: 12px; /* サブタイトルは控えめ */
-  margin: 0;
-  color: var(--text);
-}
-
-/* ナビゲーションはスマホでは非表示、ハンバーガーで切り替え */
+/* ナビ */
 .nav {
   display: none;
-}
-
-.nav.open {
-  display: flex;
   flex-direction: column;
   width: 100%;
-  background: #fff;
-  padding: 0;
-  border-top: 1px solid #e6e6e6;
+  background:#fff;
+  border-top:1px solid #e6e6e6;
   position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 49;
+  top:100%;
+  left:0;
+  z-index:49;
 }
-
 .nav a {
   display: block;
-  padding: 12px 16px;
-  border-bottom: 1px solid #e6e6e6;
-  text-decoration: none;
+  padding:12px 16px;
+  text-decoration:none;
   color: var(--text);
+  border-bottom:1px solid #e6e6e6;
 }
-
 .nav a.btn.primary {
   background: var(--accent);
-  color: #fff;
-  border-radius: 6px;
+  color:#fff;
+  border-radius:6px;
+  text-align:center;
 }
 
-/* ハンバーガーアイコン表示 */
+/* ハンバーガー */
 .nav-toggle {
-  display: block;
-  background: none;
-  border: 0;
-  font-size: 24px;
+  display:block;
+  background:none;
+  border:0;
+  font-size:24px;
 }
 
-/* 超小画面向け微調整 */
-@media (max-width:400px) {
-  .logo-box img { height: 35px; }
-  .brand h1 { font-size: 20px; }
-  .brand .sub { font-size: 11px; }
+/* ===================== ヒーロー ===================== */
+.hero {
+  position: relative;
+  overflow: hidden;
 }
+.hero-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+.hero-inner {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  color: #fff;
+}
+
+/* ===================== カード系 ===================== */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card, .svc, .fast-card {
+  background:#fff;
+  padding:12px;
+  border-radius:8px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ===================== 事業内容 ===================== */
+.grid {
+  display:flex;
+  flex-direction: column;
+  gap:12px;
+}
+.svc img {
+  width: 70%;
+  max-width: 200px;
+  height:auto;
+  display:block;
+  margin:0 auto 8px;
+}
+
+/* ===================== 施工実績 ===================== */
+#works .gallery {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+#works .gallery img {
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  display:block;
+}
+
+/* ===================== BEFORE / AFTER ===================== */
+#beforeafter .ba-list
